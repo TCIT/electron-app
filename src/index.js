@@ -26,9 +26,9 @@ const createWindow = () => {
   mainWindow.removeMenu();
 
   // Open the DevTools.
-  if (isDev) {
+  // if (isDev) {
     mainWindow.webContents.openDevTools();
-  }
+  // }
 };
 
 // This method will be called when Electron has finished
