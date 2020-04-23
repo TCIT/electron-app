@@ -26,6 +26,17 @@
       "packagerConfig": {
         "icon": "src/assets/fav"
       },
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "TCIT",
+              "name": "electron-app"
+            }
+          }
+        }
+      ],
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
