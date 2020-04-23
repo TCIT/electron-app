@@ -22,8 +22,8 @@ const createWindow = () => {
 
   // and load the index.html of the app.
   mainWindow.loadURL('https://demo.agri.cl/');
-  mainWindow.maximize();
-  mainWindow.removeMenu();
+  // mainWindow.maximize();
+  // mainWindow.removeMenu();
 
   // Open the DevTools.
   if (isDev) {
