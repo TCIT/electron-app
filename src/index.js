@@ -1,5 +1,4 @@
 const { app, BrowserWindow } = require('electron');
-require('update-electron-app')()
 const isDev = require('electron-is-dev');
 const path = require('path');
 
@@ -11,8 +10,8 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1200,
+    height: 700,
     backgroundColor: 'red',
     icon: __dirname + '/assets/fav',
     webPreferences: {
@@ -22,7 +21,7 @@ const createWindow = () => {
 
   // and load the index.html of the app.
   mainWindow.loadURL('https://demo.agri.cl/');
-  // mainWindow.maximize();
+  mainWindow.maximize();
   mainWindow.removeMenu();
 
   // Open the DevTools.
