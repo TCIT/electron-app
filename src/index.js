@@ -12,7 +12,7 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 1200,
     height: 700,
-    backgroundColor: 'red',
+    backgroundColor: 'white',
     icon: __dirname + '/assets/fav',
     webPreferences: {
       nodeIntegration: true
@@ -55,6 +55,3 @@ app.on('activate', () => {
     createWindow();
   }
 });
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and import them here.
