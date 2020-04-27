@@ -22,51 +22,7 @@
   },
   "license": "MIT",
   "config": {
-    "forge": {
-      "packagerConfig": {
-        "icon": "src/assets/fav"
-      },
-      "publishers": [
-        {
-          "name": "@electron-forge/publisher-github",
-          "config": {
-            "repository": {
-              "owner": "TCIT",
-              "name": "electron-app"
-            }
-          }
-        }
-      ],
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "Agri"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-dmg",
-          "config": {
-            "background": "./src/assets/background.png",
-            "format": "ULFO"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ]
-    }
+    "forge": "./forge-config.js"
   },
   "dependencies": {
     "@electron-forge/maker-dmg": "^6.0.0-beta.50",
