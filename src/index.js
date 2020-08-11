@@ -20,7 +20,7 @@ const createWindow = () => {
   });
 
   // and load the index.html of the app.
-  mainWindow.loadURL('https://demo.agri.cl/');
+  mainWindow.loadURL('https://accounts.agri.cl/');
   mainWindow.maximize();
   mainWindow.removeMenu();
 
