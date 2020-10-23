@@ -15,23 +15,23 @@
 # Name of your app.
 APP="Agri"
 # The path of your app to sign.
-APP_PATH="/out/make/zip/darwin/x64/$APP.app"
+APP_PATH="./out/make/zip/darwin/x64/$APP.app"
 # The path to the location you want to put the signed package.
-RESULT_PATH="~/Desktop/$APP.pkg"
+RESULT_PATH="./$APP.pkg"
 # The name of certificates you requested.
-APP_KEY="3rd Party Mac Developer Application: Company Name (APPIDENTITY)"
-INSTALLER_KEY="3rd Party Mac Developer Installer: Company Name (APPIDENTITY)"
+APP_KEY="Tomas Charad Torres"
+INSTALLER_KEY="Tomas Charad Torres"
 # The path of your plist files.
-CHILD_PLIST="/entitlements/child.plist"
-PARENT_PLIST="/entitlements/parent.plist"
-LOGINHELPER_PLIST="/entitlements/loginhelper.plist"
+CHILD_PLIST="./entitlements/child.plist"
+PARENT_PLIST="./entitlements/parent.plist"
+LOGINHELPER_PLIST="./entitlements/loginhelper.plist"
 
 FRAMEWORKS_PATH="$APP_PATH/Contents/Frameworks"
 
-codesign -s "$APP_KEY" -f --entitlements "$CHILD_PLIST" "$FRAMEWORKS_PATH/Electron Framework.framework/Versions/A/Electron Framework"
-codesign -s "$APP_KEY" -f --entitlements "$CHILD_PLIST" "$FRAMEWORKS_PATH/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib"
-codesign -s "$APP_KEY" -f --entitlements "$CHILD_PLIST" "$FRAMEWORKS_PATH/Electron Framework.framework/Versions/A/Libraries/libnode.dylib"
-codesign -s "$APP_KEY" -f --entitlements "$CHILD_PLIST" "$FRAMEWORKS_PATH/Electron Framework.framework"
+codesign -s "$APP_KEY" -f --entitlements "$CHILD_PLIST" "$FRAMEWORKS_PATH/Electron\ Framework.framework/Versions/A/Electron Framework"
+codesign -s "$APP_KEY" -f --entitlements "$CHILD_PLIST" "$FRAMEWORKS_PATH/Electron\ Framework.framework/Versions/A/Libraries/libffmpeg.dylib"
+codesign -s "$APP_KEY" -f --entitlements "$CHILD_PLIST" "$FRAMEWORKS_PATH/Electron\ Framework.framework/Versions/A/Libraries/libnode.dylib"
+codesign -s "$APP_KEY" -f --entitlements "$CHILD_PLIST" "$FRAMEWORKS_PATH/Electron\ Framework.framework"
 codesign -s "$APP_KEY" -f --entitlements "$CHILD_PLIST" "$FRAMEWORKS_PATH/$APP Helper.app/Contents/MacOS/$APP Helper"
 codesign -s "$APP_KEY" -f --entitlements "$CHILD_PLIST" "$FRAMEWORKS_PATH/$APP Helper.app/"
 codesign -s "$APP_KEY" -f --entitlements "$LOGINHELPER_PLIST" "$APP_PATH/Contents/Library/LoginItems/$APP Login Helper.app/Contents/MacOS/$APP Login Helper"

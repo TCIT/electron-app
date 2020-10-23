@@ -2,7 +2,7 @@
   "name": "agri",
   "productName": "Agri",
   "version": "1.0.2",
-  "description": "My Electron application description",
+  "description": "Agri",
   "main": "src/index.js",
   "repository": {
     "type" : "git",
